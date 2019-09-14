@@ -1,6 +1,6 @@
 #!/bin/bash
-RED=`echo "\e[31m"`
-GREEN='\e[0;32m'
+RED=`echo "\033[31m"`
+GREEN='\033[0;32m'
 NC='echo \033[0m'
 
 function update_submodule () {
