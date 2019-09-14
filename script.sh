@@ -9,7 +9,7 @@ function update_submodule () {
     #       echo "Fatal: Current branch is not master"
     #       return;      # I need to abort here!
     # fi
-    echo -e "$GREEN Running yarn in folder $NC $1"
+    echo -e "$RED Running yarn in folder $NC $1"
     cd ..
 }
 
