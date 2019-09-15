@@ -4,6 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "update": "bash script.sh"
+    "update": "bash ./scripts/run.sh"
   }
 }
