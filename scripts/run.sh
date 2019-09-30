@@ -1,18 +1,14 @@
-#!/bin/bash
-function run_submodules_update ()
+#!/bin/sh
+
+run_submodules_update ()
 {
-    for d in ./*; do
-        if [ -d $d ]; 
-        then
-            cd $d
-            if [ -e "./package.json" ];
+    for d in $(find * -type d) ; do
+            if [ -e "./${d}/package.json" ];
             then
-                bash ../scripts/get_dir_location.sh $d
-                bash ../scripts/check_current_branch.sh $d
-                bash ../scripts/update_submodules.sh $d
+		( cd ${d} ; bash ../scripts/get_dir_location.sh $d )
+		( cd ${d} ; bash ../scripts/check_current_branch.sh $d )
+		( cd ${d} ; bash ../scripts/update_submodules.sh $d )
             fi
-            cd ..
-        fi
     done
 }
 
